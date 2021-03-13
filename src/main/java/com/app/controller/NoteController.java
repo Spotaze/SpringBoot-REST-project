@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.List;
 
 import static org.springframework.http.ResponseEntity.status;
 
@@ -25,7 +26,7 @@ public class NoteController {
     }
 
     @GetMapping
-    public ResponseEntity<Iterable<Note>> getAllNotes(Principal principal){
+    public ResponseEntity<List<Note>> getAllNotes(Principal principal){
         return status(HttpStatus.OK).body(noteService.getAllNotes(principal));
     }
 

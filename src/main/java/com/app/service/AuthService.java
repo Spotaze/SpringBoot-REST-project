@@ -5,7 +5,6 @@ import com.app.dto.LoginRequest;
 import com.app.dto.RefreshTokenRequest;
 import com.app.dto.SignupRequest;
 import com.app.exceptions.AuthException;
-import com.app.exceptions.NotFoundException;
 import com.app.model.User;
 import com.app.repository.UserRepo;
 import lombok.AllArgsConstructor;

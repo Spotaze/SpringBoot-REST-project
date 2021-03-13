@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.security.Principal;
+import java.util.List;
 
 
 @Service
@@ -28,7 +29,7 @@ public class NoteService {
     }
 
     @Transactional(readOnly = true)
-    public Iterable<Note> getAllNotes(Principal principal) {
+    public List<Note> getAllNotes(Principal principal) {
         return authService.findLoggedInUser(principal).getNotes();
     }
 
